@@ -10,10 +10,13 @@
       <a class="brand" href="/">Intern.us</a>
       <ul class="nav pull-right">
         <li>
-          {{#if currentUser}}
-            {{> linkCV}}
-          {{/if}}
+        {{#if currentUser}}
+          {{> menu}}
         </li>
+        <li>
+          {{> linkCV}}
+        {{/if}}
+        </li>  
         <li>
           {{loginButtons}}
         </li>
@@ -22,11 +25,63 @@
   </div>
  
 </div>
-  <div class="container" id="main">
-      {{> addquestion}}
-      {{> questions}}
-    </div>
+<div class="container" id="main">
+  {{> color_list}}
+  {{> Profils}}
+</div>
 </body>
+<template name="color_list">
+  {{#each colors}}
+    {{> color_display}}
+  {{else}}
+    NOTHING
+  {{/each}}
+</template>
+<template name="color_display">
+  {{name}}
+</template>
+<template name="main">
+  {{#if currentUser}}
+    {{#if welcome}}
+      Yo, you're on the welcome page.
+    {{/if}}
+    {{#if createquizz}}
+      {{> newquizz}}
+    {{/if}}
+    {{#if answerquizz}}
+      {{> quizzlist}}
+    {{/if}}
+  {{/if}}
+</template>
+
+<template name="newquizz">
+  <div>
+    <input type="text" name="quizz-title" id="quizz-title" placeholder="Title of your quizz" />
+    {{>newquestion}}
+    <input type="button" class="btn-info submit-quizz" value="Submit"/>
+  </div>
+</template>
+
+<template name="newquestion">
+  <div>
+    <a href="#" class="new-question">Add a question</a>
+  </div>
+</template>
+
+<template name="quizzlist">
+  {{#each items}}
+    {{> quizzlink}}
+  {{/each}}
+</template>
+
+<template name="quizzlink">
+  <span><a href="#" class="quizz-{{id}}">{{title}}</a></span>
+</template>
+
+<template name="menu">
+  <a href="#" id="quizz-creation">Create Quizz</a>
+  <a href="#" id="quizz">Answer Quizz</a>
+</template>
 
 <template name="linkCV">
   {{#if voidcv}}       
@@ -60,3 +115,4 @@
   <br/>
   <input type="button" class="btn-info add-question" value="Add Question"/>
 </template>
+

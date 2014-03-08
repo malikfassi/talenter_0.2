@@ -1,4 +1,4 @@
-Colors = new Meteor.Collection("colors");
+
 if (Meteor.isServer) {
 	Students = new Meteor.Collection("Students");
 	Questions = new Meteor.Collection("questions");

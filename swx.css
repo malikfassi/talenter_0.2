@@ -1,1 +1,58 @@
 /* CSS declarations go here */
+/* CSS declarations go here */
+
+body{
+background-image:url("cloth_alike.png");
+background-repeat:repeat;
+}
+.navbar-inverse .navbar-inner{
+background-image:url("crossword.png");
+background-repeat:repeat;
+}
+
+.tile{
+margin-top:50px;
+margin-left:300px;
+margin-right:0px;
+margin-bottom:auto;
+width: 160px;
+height: 180px;
+float: right;
+padding: 10px;
+}
+
+.thumbnail{
+background-image:url("crossword.png");
+}
+
+.nav-stacked > li {
+  float: none;
+  }
+
+  .nav-stacked > li + li {
+    margin-top: 2px;
+	  margin-left: 0;
+	  }
+
+.title{
+	margin-left:270px;
+	width: 300px;
+}
+
+.vertical_menu{
+	float: right;
+	width: auto;
+	background-color:#272822;
+	min-height: 1000px;
+}
+
+.border{
+		border-style:solid;
+		border-width:3px;
+}
+
+
+a:link {color:#000000;}
+a:visited {color:#000000;}
+a:hover {background-color: #E6DB74;}
+a:active {background-color: #E6DB74;}

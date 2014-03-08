@@ -1,0 +1,95 @@
+#scrap
+
+<template name="menu">
+  <ul>
+    <li><a href="#" id="quizz-creation">Create Quizz</a></li>
+    <li><a href="#" id="quizz">Answer Quizz</a></li>
+  </ul>
+</template>
+
+<template name="color_list">
+  {{#each colors}}
+    {{> color_display}}
+  {{else}}
+    <div class="hero-unit text-center">
+      FIND TALENT NOW!
+    </div>
+  {{/each}}
+</template>
+
+<template name="color_display">
+  {{name}}
+</template>
+
+<template name="main">
+  {{#if currentUser}}
+    {{#if welcome}}
+      Yo, you're on the welcome page.
+    {{/if}}
+    {{#if createquizz}}
+      {{> newquizz}}
+    {{/if}}
+    {{#if answerquizz}}
+      {{> quizzlist}}
+    {{/if}}
+  {{/if}}
+</template>
+
+<template name="newquizz">
+  <div>
+    <input type="text" name="quizz-title" id="quizz-title" placeholder="Title of your quizz" />
+    {{>newquestion}}
+    <input type="button" class="btn-info submit-quizz" value="Submit"/>
+  </div>
+</template>
+
+<template name="newquestion">
+  <div>
+    <a href="#" class="new-question">Add a question</a>
+  </div>
+</template>
+
+<template name="quizzlist">
+  {{#each items}}
+    {{> quizzlink}}
+  {{/each}}
+</template>
+
+<template name="quizzlink">
+  <span><a href="#" class="quizz-{{id}}">{{title}}</a></span>
+</template>
+
+
+<template name="linkCV">
+  {{#if voidcv}}       
+    <span>
+      <input type="text" name="linkCVtext" id="linkCVtext" placeholder="Link your CV" />
+      <input type="button" class="btn-info link-cv" value="Link your CV" />
+    </span>
+  {{/if}}
+</template>
+
+<template name="question">
+    <div>
+        <p class="lead">
+            {{questionText}}
+            <a class="btn btn-small btn-success yes" href="#"><i class="icon-thumbs-up"></i> Yes</a>
+ 
+            <a class="btn btn-small btn-danger no" href="#"><i class="icon-thumbs-down"></i> No</a>
+        </p>
+    </div>
+</template>
+
+<template name="questions">
+    <h2>All Questions</h2>
+    {{#each items}}
+        {{> question}}
+     {{/each}}
+</template>
+ 
+<template name="addquestion">
+  <textarea rows="3" class="input-xxlarge" name="questionText" id="questionText" placeholder="Add Your Question"></textarea>
+  <br/>
+  <input type="button" class="btn-info add-question" value="Add Question"/>
+</template>
+

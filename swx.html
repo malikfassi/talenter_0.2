@@ -1,118 +1,64 @@
 <head>
-  <title>Talenter : Get started quickly!</title>
+  <title>Painless internship management</title>
+  <link href="swx.css" rel="stylesheet" type="text/css">
 </head>
- 
+
 <body>
   <div class="navbar navbar-static-top navbar-inverse">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="brand" href="/">Talenter.co</a>
-      <ul class="nav pull-right">
-        <li>{{> menu}}</li>
-        <li>
-          {{#if currentUser}}
-            {{> linkCV}}
-          {{/if}}
-        </li>  
-        <li>{{loginButtons}}</li>
-      </ul>
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="/">Talent.ly</a>
+        <ul class="nav pull-right">
+          <li>
+            {{loginButtons}}
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="container" id="main">
-    {{> color_list}}
-  </div>
+  </div> <!--navbar-->
+<div class="container">
+    <h2 class="title thumbnail" style="padding:10px; float:left">OFFRES DE STAGE</h2>
+    <div class="content" style="display:inline; float:left">
+      <ul class="thumbnails border" style="width:auto">
+        <a href="#">
+          <li class="thumbnail span2">
+            <h6>GOOGLE</h6>
+            <div style="float:left">Web Developper</div> <img src="python.png" height="40px" width="40px" style="float:right">
+            <p style="color:#f92672">1500€/mois</p><div style="float:left">PARIS, IDF</div> <div  style="float:right">01/07 - 30/08</div></p>
+          </li>
+        </a>
+        <a href="#">
+          <li class="thumbnail span2">
+            <h6>TWITTER</h6>
+            <div style="float:left">WEB DEVELOPPER</div> <img src="js.png" height="40px" width="40px" style="float:right">
+            <p style="color:#f92672">1500€/mois</p>
+            <p><div style="float:left">PARIS, IDF</div> <div  style="float:right">01/07 - 30/08</div></p>
+          </li>
+        </a>
+        <a href="#">
+          <li class="thumbnail span2">
+            <h6>FACEBOOK</h6>
+            <div style="float:left">WEB DEVELOPPER</div> <img src="html5.png" height="40px" width="40px" style="float:right">
+            <p style="color:#f92672">1500€/mois</p>
+            <p><div style="float:left">PARIS, IDF</div> <div  style="float:right">01/07 - 30/08</div></p>
+          </li>
+        </a>
+      </ul>
+    </div> <!-- content -->
+        <div class="container vertical_menu border" style="display:inline; float:right">
+      <ul class="nav nav-list span3">
+        <li><img src="user.png" height="30px" width="30px"> <h3 style="color:#8F908A; display:inline">Malik Fassi Fihri<h3></li>
+        <li><img src="skills.png" height="40px" width="40px"> <h5 style="color:#8F908A; display:inline">: </h5><img src="js.png" height="40px" width="40px"> <img src="html5.png" height="40px" width="40px"> <img src="python.png" height="40px" width="40px"> </li>
+      </ul>
+  </div> <!-- container -->
 </body>
 
-<template name="menu">
-  <ul>
-    <li><a href="#" id="quizz-creation">Create Quizz</a></li>
-    <li><a href="#" id="quizz">Answer Quizz</a></li>
-  </ul>
+<template name="eihkj">
+  welcome to the alskdj 
+  {{greeting}}
+  <input type="button" value="Click" />
 </template>
 
-<template name="color_list">
-  {{#each colors}}
-    {{> color_display}}
-  {{else}}
-    <div class="hero-unit text-center">
-      FIND TALENT NOW!
-    </div>
-  {{/each}}
-</template>
-
-<template name="color_display">
-  {{name}}
-</template>
-
-<template name="main">
-  {{#if currentUser}}
-    {{#if welcome}}
-      Yo, you're on the welcome page.
-    {{/if}}
-    {{#if createquizz}}
-      {{> newquizz}}
-    {{/if}}
-    {{#if answerquizz}}
-      {{> quizzlist}}
-    {{/if}}
-  {{/if}}
-</template>
-
-<template name="newquizz">
-  <div>
-    <input type="text" name="quizz-title" id="quizz-title" placeholder="Title of your quizz" />
-    {{>newquestion}}
-    <input type="button" class="btn-info submit-quizz" value="Submit"/>
-  </div>
-</template>
-
-<template name="newquestion">
-  <div>
-    <a href="#" class="new-question">Add a question</a>
-  </div>
-</template>
-
-<template name="quizzlist">
-  {{#each items}}
-    {{> quizzlink}}
-  {{/each}}
-</template>
-
-<template name="quizzlink">
-  <span><a href="#" class="quizz-{{id}}">{{title}}</a></span>
-</template>
-
-
-<template name="linkCV">
-  {{#if voidcv}}       
-    <span>
-      <input type="text" name="linkCVtext" id="linkCVtext" placeholder="Link your CV" />
-      <input type="button" class="btn-info link-cv" value="Link your CV" />
-    </span>
-  {{/if}}
-</template>
-
-<template name="question">
-    <div>
-        <p class="lead">
-            {{questionText}}
-            <a class="btn btn-small btn-success yes" href="#"><i class="icon-thumbs-up"></i> Yes</a>
+ <template name="student">
  
-            <a class="btn btn-small btn-danger no" href="#"><i class="icon-thumbs-down"></i> No</a>
-        </p>
-    </div>
 </template>
-
-<template name="questions">
-    <h2>All Questions</h2>
-    {{#each items}}
-        {{> question}}
-     {{/each}}
-</template>
- 
-<template name="addquestion">
-  <textarea rows="3" class="input-xxlarge" name="questionText" id="questionText" placeholder="Add Your Question"></textarea>
-  <br/>
-  <input type="button" class="btn-info add-question" value="Add Question"/>
-</template>
-

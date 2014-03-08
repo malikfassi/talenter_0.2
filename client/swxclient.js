@@ -3,10 +3,6 @@ Colors = new Meteor.Collection("colors");
 if (Meteor.isClient) {
   Students = new Meteor.Collection("Students");
 
-  Template.color_list.colors = function()
-  {
-    return Colors.find({}, {sort: {name:1}});
-  }
   Questions = new Meteor.Collection("questions");
   
   Deps.autorun(function()
@@ -14,13 +10,13 @@ if (Meteor.isClient) {
     Meteor.subscribe('userData');
   });
 
-  Template.linkCV.events({
-    'click input.link-cv' : function(event){
-      event.preventDefault();
-      var cv = document.getElementById("linkCVtext").value;
-      Meteor.call("addCV", cv);
-    }
-  });
+  // Template.linkCV.events({
+  //   'click input.link-cv' : function(event){
+  //     event.preventDefault();
+  //     var cv = document.getElementById("linkCVtext").value;
+  //     Meteor.call("addCV", cv);
+  //   }
+  // });
 
   Template.addquestion.events({
     'click input.add-question' : function(event){

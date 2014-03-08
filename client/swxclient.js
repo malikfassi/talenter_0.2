@@ -7,12 +7,6 @@ if (Meteor.isClient) {
   {
     return Colors.find({}, {sort: {name:1}});
   }
-  Template.Profils.items = function()
-  {
-    console.log('ok');
-    return Students.find({}, {sort: {name : 1}});
-  }
-
   Questions = new Meteor.Collection("questions");
   
   Deps.autorun(function()

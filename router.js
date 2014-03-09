@@ -3,4 +3,9 @@ Router.map(function() {
 		path: '/',
 		template : 'index',
 		layoutTemplate: 'layoutMain'});
+
+	this.route('talent', {
+		path: '/talent',
+		template : 'talent',
+		layoutTemplate: 'layoutMain'});
 });

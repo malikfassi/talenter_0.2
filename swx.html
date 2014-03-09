@@ -4,10 +4,6 @@
 </head>
 
 <body>        
-  {{>nav-bar}}
-  <ul><!--If not logged -->
-    {{>company}}
-  </ul>
 </body>
 
 <template name="display-annonces">
@@ -41,12 +37,6 @@
       <li><img src="skills.png" height="40px" width="40px"> <h5 style="color:#8F908A; display:inline">: </h5><img src="js.png" height="40px" width="40px"> <img src="html5.png" height="40px" width="40px"> <img src="python.png" height="40px" width="40px"> </li>
     </ul>
   </div> <!-- container -->
-</template>
-
-<template name="annonces_html">
-  {{#each items}}
-  {{> annonce_show}}
-  {{/each}}
 </template>
 
 <template name="annonce_show">

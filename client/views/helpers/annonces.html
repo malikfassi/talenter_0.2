@@ -1,0 +1,15 @@
+<template name="annonces_html">
+  {{#each items}}
+  {{> annonce_show}}
+  {{/each}}
+</template>
+
+<template name="annonce_show">
+  <a href="{{company_test}}">
+    <li class="thumbnail span2">
+      <h6>{{company}}</h6>
+      <div style="float:left">{{needs}}</div> <img src="{{language_img}}.png" height="40px" width="40px" style="float:right">
+      <p style="color:#f92672">{{salary}}</p><div style="float:left">{{location}}</div> <div  style="float:right">{{start}} - {{end}}</div></p>
+    </li>
+  </a>
+</template>

@@ -1,7 +1,7 @@
 
 if (Meteor.isServer) {
 	Students = new Meteor.Collection("Students");
-	Questions = new Meteor.Collection("questions");
+	Annonces = new Meteor.Collection("annonces");
 
 	Meteor.startup(function () {
 		Meteor.publish("userData", function()

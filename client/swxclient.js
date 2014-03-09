@@ -1,6 +1,6 @@
-Colors = new Meteor.Collection("colors");
-
 if (Meteor.isClient) {
+	Annonces = new Meteor.Collection("annonces");
+
   Students = new Meteor.Collection("Students");
 
   Questions = new Meteor.Collection("questions");
@@ -18,57 +18,9 @@ if (Meteor.isClient) {
   //   }
   // });
 
-  Template.addquestion.events({
-    'click input.add-question' : function(event){
-      event.preventDefault();
-      var questionText = document.getElementById("questionText").value;
-      Meteor.call("addQuestion", questionText);
-      document.getElementById("questionText").value = "";
-    }
-  });
-
-  Template.questions.items = function(){
-    return Questions.find({},{sort:{'submittedOn':-1}});
+  Template.annonces.items = function(){
+  	return Annonces.find({},{sort:{'start':1}});
   };
 
-  Template.menu.events({
-      'click a' : function(event){
-        event.preventDefault();
-        var choice = event.toElement.id;
-        switch(choice)
-        {
-          case 'quizz-creation':
-            Meteor.call('changePos', 'quizzcreation');
-            break;
-          case 'quizz':
-            Meteor.call('changePos', 'quizz');
-            break;
-        }
-      }
-  });
-
-  Template.linkCV.voidcv = function(){
-    return Meteor.user().cv === '';
-  }
-
-  Template.main.welcome = function(){
-    return Meteor.user().position == 'welcome';
-  }
-
-  Template.main.createquizz = function(){
-    return Meteor.user().position == 'quizzcreation';
-  }
-
-  Template.main.answerquizz = function(){
-    return Meteor.user().position == 'quizz';
-  }
-
-  Template.newquestion.events({
-    'click a.new-question' : function(event)
-    {
-      event.preventDefault();
-
-    }
-  })
 }
 

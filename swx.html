@@ -22,6 +22,15 @@
       <ul class="thumbnails" style="width:auto">
         {{>annonces_html}}
       </ul>
+      <ul>
+        {{>index}}
+      </ul>
+</body>
+
+<template name="student">
+ 
+</template>
+<template name="lateral-bar">
     </div> <!-- content -->
         <div class="container vertical_menu border" style="display:inline; float:right; position:fixed; top:40px; right:0px">
       <ul class="nav nav-list span3">
@@ -29,13 +38,7 @@
         <li><img src="skills.png" height="40px" width="40px"> <h5 style="color:#8F908A; display:inline">: </h5><img src="js.png" height="40px" width="40px"> <img src="html5.png" height="40px" width="40px"> <img src="python.png" height="40px" width="40px"> </li>
       </ul>
   </div> <!-- container -->
-</body>
-
-
- <template name="student">
- 
 </template>
-
 <template name="annonces_html">
   {{#each items}}
     {{> annonce_show}}

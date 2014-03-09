@@ -1,0 +1,52 @@
+  <template name="bla">
+  <div class="navbar navbar-static-top navbar-inverse">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="/">Talent.ly</a>
+        <ul class="nav pull-right">
+          <li>
+            {{loginButtons}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div> <!--navbar-->
+<div class="thumbnail span2 text-center" style="position:fixed; top:50px; left:350px; width: auto">
+  <div>TEST1</div>
+  <img src="python.png" height="40px" width="40px">
+  <div> Developper un programme qui resout un sudoku</div>
+  <form name="input" action="" method="get">
+   Votre reponse: <input type="text" name="user">
+   <input type="submit" value="Submit">
+  </form>
+  <div class="progress progress-info progress-striped">
+  <div class="bar" style="width: 20%"></div>
+</div>
+  </div>
+<div class="container">
+        <div class="container vertical_menu border" style="display:inline; float:right; position:fixed; top:40px; right:0px">
+      <ul class="nav nav-list span3">
+        <li><img src="user.png" height="30px" width="30px"> <h3 style="color:#8F908A; display:inline">Malik Fassi Fihri<h3></li>
+        <p></p>
+        <p></p>
+        <li><img src="skills.png" height="40px" width="40px"> <h5 style="color:#8F908A; display:inline">: </h5><img src="js.png" height="40px" width="40px"> <img src="html5.png" height="40px" width="40px"> <img src="python.png" height="40px" width="40px"> </li>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <li style="color:#8F908A;">Vos candidatures en cours: </li>
+        <p></p>
+        <p></p>
+        <a href="#">
+          <li class="thumbnail span2">
+            <h6>FACEBOOK</h6>
+            <div style="float:left">WEB DEVELOPPER</div> <img src="html5.png" height="40px" width="40px" style="float:right">
+            <p style="color:#f92672">1500€/mois</p>
+            <p><div style="float:left">PARIS, IDF</div> <div  style="float:right">01/07 - 30/08</div></p>
+          </li>
+        <p></p>
+        </a>
+      </ul>
+  </div> <!-- container -->
+
+</template>

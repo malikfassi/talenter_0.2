@@ -1,19 +1,40 @@
 <template name="nav-bar">
-    <div class="navbar navbar-static-top navbar-inverse">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="/">Talent.ly</a>
-          <ul class="menu">
-            <li><a href="./talent">Talent</li>
-            <li><a href="./quizz">Quizz</li>
-            <li><a href="./anonnces">Annonces</li>
-          </ul>
-          <ul class="nav pull-right">
-            <li>
-              {{loginButtons}}
-            </li>
-          </ul>
-        </div>
+  <div class="navbar navbar-inverse navbar-static-top">
+    <div class="navbar-inner">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="brand" href="/">Talent.ly</a>
       </div>
-    </div> <!--navbar-->
-  </template>
+      
+        <ul class="nav navbar-nav col-md-8 pull-right">
+
+        </ul>
+        <ul class="nav pull-right">
+          <li><a href="/talent">Talent.ly</a></li>
+          <li><a href="/quizz">Quizz</a></li>
+          <li><a href="/annonces">Annonces</a></li>
+          <li></li>
+          <li>{{loginButtons}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>
+
+  <!-- <div class="navbar navbar-static-top navbar-inverse">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="/">Talent.ly</a>
+        <ul class="menu">
+          <li><a href="./talent">Talent</li>
+          <li><a href="./quizz">Quizz</li>
+          <li><a href="./annonces">Annonces</li>
+        </ul>
+        <ul class="nav pull-right">
+          <li>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div> <!--navbar-->
+

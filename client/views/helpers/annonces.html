@@ -1,16 +1,17 @@
-<template name="annonces_html">
-  {{#each items}}
-  {{> annonce_show}}
-  {{/each}}
-</template>
-
 <template name="display-annonces">
   <h2 class="title thumbnail" style="padding:10px; float:left">OFFRES DE STAGE</h2>
   <div class="content" style="display:inline; float:left">
     <ul class="thumbnails" style="width:auto">
       {{>annonces_html}}
     </ul>
-  </template>
+  </div>
+</template>
+
+<template name="annonces_html">
+  {{#each items}}
+  {{> annonce_show}}
+  {{/each}}
+</template>
 
 <template name="annonce_show">
   <a href="{{company_test}}">

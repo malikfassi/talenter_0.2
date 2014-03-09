@@ -16,6 +16,6 @@ Router.map(function() {
 
 	this.route('annonces', {
 		path: '/annonces',
-		template : 'annonces',
+		template : 'display-annonces',
 		layoutTemplate: 'layoutMain'});
 });

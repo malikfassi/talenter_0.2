@@ -18,6 +18,4 @@ if (Meteor.isClient) {
   Template.annonces_html.items = function(){
   	return Annonces.find({},{sort:{'start':1}});
   };
-
 }
-

@@ -1,23 +1,8 @@
 <template name="layoutMain">
-	<div class="navbar navbar-static-top navbar-inverse">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="brand" href="/">Talent.ly</a>
-        <ul>
-        	<li><a href="./talent">Talent</li>
-        	<li><a href="./">Home</li>
-      	</ul>
-        <ul class="nav pull-right">
-          <li>
-            {{loginButtons}}
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div> <!--navbar--> 
+  {{> nav-bar}}
 	<div role="main">
     {{#if currentUser}}
-      {{> nav-bar}}
+      {{> lateral-bar}}
     {{/if}}
 		{{yield}}
 	</div>

@@ -8,4 +8,14 @@ Router.map(function() {
 		path: '/talent',
 		template : 'talent',
 		layoutTemplate: 'layoutMain'});
+
+	this.route('quizz', {
+		path: '/quizz',
+		template : 'quizz',
+		layoutTemplate: 'layoutMain'});
+
+	this.route('annonces', {
+		path: '/annonces',
+		template : 'annonces',
+		layoutTemplate: 'layoutMain'});
 });

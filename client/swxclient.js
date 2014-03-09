@@ -8,6 +8,7 @@ if (Meteor.isClient) {
   Deps.autorun(function()
   {
     Meteor.subscribe('userData');
+    Meteor.subscribe('annonces');
   });
 
   // Template.linkCV.events({
@@ -18,7 +19,7 @@ if (Meteor.isClient) {
   //   }
   // });
 
-  Template.annonces.items = function(){
+  Template.annonces_html.items = function(){
   	return Annonces.find({},{sort:{'start':1}});
   };
 

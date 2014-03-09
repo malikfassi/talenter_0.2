@@ -9,6 +9,9 @@ if (Meteor.isServer) {
 			return Meteor.users.find({_id : this.userId},
 								{fields: {'cv':1, 'position':1}});
 		});
+		Meteor.publish("annonces", function(){
+			return Annonces.find();
+		});
 	});
 
 	Accounts.onCreateUser(function(options, user){

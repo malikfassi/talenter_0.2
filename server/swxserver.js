@@ -1,6 +1,5 @@
 
 if (Meteor.isServer) {
-	Students = new Meteor.Collection("Students");
 	Annonces = new Meteor.Collection("annonces");
 
 	Meteor.startup(function () {
@@ -20,24 +19,6 @@ if (Meteor.isServer) {
 		if (options.profile)
 			user.profile = options.profile;
 		return user;
-	});
-
-	Meteor.methods({
-		addQuestion : function(questionText){
-			var questionId = Questions.insert({
-				'questionText' : questionText,
-				'submittedOn': new Date()
-			});
-			return questionId;
-		},
-		addCV : function(linkCVtext){
-			Meteor.users.update({_id : Meteor.userId()},
-						{$set: {cv:linkCVtext}});
-		},
-		changePos : function(newpos){
-			Meteor.users.update({_id : Meteor.userId()},
-						{$set: {position : newpos}});
-		}
 	});
 
 }

@@ -1,9 +1,5 @@
 if (Meteor.isClient) {
 	Annonces = new Meteor.Collection("annonces");
-
-  Students = new Meteor.Collection("Students");
-
-  Questions = new Meteor.Collection("questions");
   
   Deps.autorun(function()
   {

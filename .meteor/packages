@@ -13,3 +13,4 @@ accounts-password
 accounts-ui
 accounts-twitter
 insecure
+iron-router

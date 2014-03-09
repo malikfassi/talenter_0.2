@@ -16,6 +16,9 @@
     </div>
   </div> <!--navbar--> 
 	<div role="main">
+    {{#if currentUser}}
+      {{> nav-bar}}
+    {{/if}}
 		{{yield}}
 	</div>
 </template>
